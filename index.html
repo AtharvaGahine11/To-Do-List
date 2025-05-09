@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stylish To-do List</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url(https://i.pinimg.com/736x/1f/68/6d/1f686df59b130021dab1c346f8487448.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      backdrop-filter: blur(3px);
+    }
+
+    .container {
+      margin-top: 5rem;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    #tools-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #input-text {
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    #add-task-button {
+      padding: 0.7rem 2rem;
+      background: linear-gradient(135deg, #00c853, #64dd17);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    #add-task-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #64dd17;
+    }
+
+    #task-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      margin-top: 2rem;
+      padding: 1.5rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .task-item {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .task-item:hover {
+      transform: scale(1.02);
+    }
+
+    .delete-button {
+      background-color: #ff1744;
+      color: white;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .delete-button:hover {
+      background-color: #d50000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="tools-container">
+      <input type="text" id="input-text" placeholder="Add a task" />
+      <button id="add-task-button">ADD TASK</button>
+    </div>
+    <div id="task-container">
+     
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
